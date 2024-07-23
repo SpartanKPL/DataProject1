@@ -49,28 +49,28 @@ After this set your docker container tab should look like this:
 <br>
 5. Using a browser, navigate to 'localhost:8080'
 6. username: airflow, password: airflow:
-![airflowsignin](img/airflowsignin.png)  <br>
+![airflowsignin.png](img/airflowsignin.png)  <br>
 <br>
 7. The initial landing page will have an import error as the connection and admin variables need to be set:
 ![airflowlanding](img/airflowlanding.png)  <br>
 <br>
-![airflowadmin](img/airflowadmin.png)  <br>
+![airflowadmin.png](img/airflowadmin.png)  <br>
 <br>
 8. Under connections click the '+' icon, input these details and save:
-![airflowconnections](img/airflowconnections.png)
+![airflowconnections.png](img/airflowconnections.png)
 If there is a specific database you want the data to be loaded into, input the database into 'Schema', otherwise the data
 will be loaded into 'master'  <br>
 <br>
 9. Under variables click 'choose file' and navigate to the kaggle.json file downloaded previously.  <br>
 <br>
 10. Click import variables: 
-![airflowvariables](img/airflowvariables.png)  <br>
+![airflowvariables.png](img/airflowvariables.png)  <br>
 <br>
 11. On the home page activate the toggle to initiate the ETL process:
-![airflowcomplete](img/airflowcomplete.png)  <br>
+![airflowcomplete.png](img/airflowcomplete.png))  <br>
 <br>
 12. Reload the page and the DAG should be running and eventually complete successfully:
-![etlcomplete](img/etlcomplete.png)  <br>
+![etlcomplete.png](img/etlcomplete.png)  <br>
 <br>
 13. The data should now be ingested and normalised in your database of choice:
 ![load.png](img/load.png)
