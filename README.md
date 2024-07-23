@@ -44,43 +44,32 @@ _Ensure the password entered after `MSSQL_SA_PASSWORD` is noted down and follows
 3. Move into the 'Pipeline' directory and create the custom docker image with:  <br> `docker build -t airflow-sqlserver -f Dockerfile . --no-cache`
 4. In the same directory run:  <br> `docker compose up`  <br>
 <br>
-After this set your docker container tab should look like this:
-![containers.png](img/containers.png)  <br>
+After this set your docker container tab should look like this: ![containers.png](img/containers.png)  <br>
 <br>
 5. Using a browser, navigate to 'localhost:8080'
-6. username: airflow, password: airflow:
-![airflowsignin.png](img/airflowsignin.png)  <br>
+6. username: airflow, password: airflow: ![airflowsignin.png](img/airflowsignin.png)  <br>
 <br>
-7. The initial landing page will have an import error as the connection and admin variables need to be set:
-![airflowlanding](img/airflowlanding.png)  <br>
+7. The initial landing page will have an import error as the connection and admin variables need to be set: ![airflowlanding](img/airflowlanding.png)  <br>
+<br> ![airflowadmin.png](img/airflowadmin.png)  <br>
 <br>
-![airflowadmin.png](img/airflowadmin.png)  <br>
-<br>
-8. Under connections click the '+' icon, input these details and save:
-![airflowconnections.png](img/airflowconnections.png)
+8. Under connections click the '+' icon, input these details and save: ![airflowconnections.png](img/airflowconnections.png)
 If there is a specific database you want the data to be loaded into, input the database into 'Schema', otherwise the data
 will be loaded into 'master'  <br>
 <br>
 9. Under variables click 'choose file' and navigate to the kaggle.json file downloaded previously.  <br>
 <br>
-10. Click import variables: 
-![airflowvariables.png](img/airflowvariables.png)  <br>
+10. Click import variables: ![airflowvariables.png](img/airflowvariables.png)  <br>
 <br>
-11. On the home page activate the toggle to initiate the ETL process:
-![airflowcomplete.png](img/airflowcomplete.png))  <br>
+11. On the home page activate the toggle to initiate the ETL process: ![airflowcomplete.png](img/airflowcomplete.png))  <br>
 <br>
-12. Reload the page and the DAG should be running and eventually complete successfully:
-![etlcomplete.png](img/etlcomplete.png)  <br>
+12. Reload the page and the DAG should be running and eventually complete successfully: ![etlcomplete.png](img/etlcomplete.png)  <br>
 <br>
-13. The data should now be ingested and normalised in your database of choice:
-![load.png](img/load.png)
+13. The data should now be ingested and normalised in your database of choice: ![load.png](img/load.png)
 
 ## Database Structure
-The final product is normalised to the 3rd normal form as per the following ERD:
-![Schema.png](img/Schema.png)
+The final product is normalised to the 3rd normal form as per the following ERD: ![Schema.png](img/Schema.png)
 
 
 ## ETL Structure
 The ETL uses Airflow to automate the extracting, transformation and loading of data with python into an MSSQL server datastore with 
-the extraction, cleaning and loading done through python and normalisation of the database through SQL.
-![pipeline.png](img/pipeline.png)
+the extraction, cleaning and loading done through python and normalisation of the database through SQL. ![pipeline.png](img/pipeline.png)
