@@ -45,8 +45,9 @@ _Ensure the password entered after `MSSQL_SA_PASSWORD` is noted down and follows
 4. In the same directory run:  <br> `docker compose up`  <br>
 <br>
 After this set your docker container tab should look like this: ![containers.png](img/containers.png)  <br>
+
+5. Using a browser, navigate to 'localhost:8080'  <br>
 <br>
-5. Using a browser, navigate to 'localhost:8080'
 6. username: airflow, password: airflow: ![airflowsignin.png](img/airflowsignin.png)  <br>
 <br>
 7. The initial landing page will have an import error as the connection and admin variables need to be set: ![airflowlanding](img/airflowlanding.png)  <br>
